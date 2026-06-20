@@ -798,3 +798,63 @@ body {
     margin-top: 40px;
   }
 }
+
+/* Contenedor exterior */
+.seccion-galeria {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.titulo-seccion {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  border-left: 6px solid #E52320; /* Detalle rojo de tu lona ARA */
+  padding-left: 15px;
+}
+
+/* Caja de la galería con Flexbox (El sistema más compatible del mundo) */
+.galeria-rectangular {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las fotos bajen a la siguiente fila */
+  gap: 20px;       /* Espacio de separación entre las tarjetas */
+  justify-content: center; /* Centra las fotos si la última fila queda incompleta */
+}
+
+/* Tarjeta contenedora de cada imagen */
+.tarjeta-foto {
+  /* En pantallas grandes calcula el espacio para 4 columnas fijas */
+  flex: 1 1 calc(25% - 20px); 
+  min-width: 250px; /* Evita que las fotos se hagan minúsculas en pantallas chicas */
+  height: 200px;    /* Altura fija para que todas las tarjetas sean simétricas */
+  background-color: #f0f0f0;
+  border: 2px solid #000000; /* Borde negro estilo tu lona */
+  overflow: hidden;
+  box-shadow: 4px 4px 0px #F3F139; /* Sombra amarilla ARA */
+}
+
+/* Estilo de la imagen interna */
+.tarjeta-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta y centra la foto automáticamente sin deformarla */
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto sutil al pasar el cursor (Altamente compatible) */
+.tarjeta-foto:hover img {
+  transform: scale(1.05); /* Zoom suave */
+}
+
+/* Ajuste específico para pantallas de celulares */
+@media (max-width: 480px) {
+  .tarjeta-foto {
+    flex: 1 1 100%; /* Ocupa todo el ancho del celular */
+    height: 220px;  /* Un poco más alta en móviles para que luzca mejor */
+  }
+}
+
