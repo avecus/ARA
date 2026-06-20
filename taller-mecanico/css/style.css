@@ -29,190 +29,149 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-  background: var(--negro);
-  color: var(--humo);
-  font-family: var(--font-body);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
 }
 
-img, svg { display: block; max-width: 100%; }
-
-a { color: inherit; text-decoration: none; }
-
-ul { list-style: none; }
-
-/* ── UTILIDADES ─────────────────────────────── */
-.container {
-  width: min(1160px, 92vw);
-  margin-inline: auto;
+/* --- BLOQUE HERO DIAGONAL (AMARILLO Y NEGRO) --- */
+.hero-section {
+  position: relative;
+  min-height: 450px;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
 }
 
-.section {
-  padding-block: clamp(64px, 8vw, 120px);
+/* Fondo amarillo cortado en diagonal idéntico a la lona */
+.hero-diagonal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-color: #F3F139; /* Amarillo brillante ARA */
+  border-bottom: 25px solid #000000; /* Franja negra gruesa */
+  transform: skewY(-12deg);
+  transform-origin: top left;
+  z-index: 1;
 }
 
-.section-eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--naranja);
-  margin-bottom: 12px;
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.section-header {
-  margin-bottom: clamp(32px, 4vw, 56px);
+/* --- RECREACIÓN DEL LOGOTIPO ARA --- */
+.logo-box {
+  background-color: #ffffff;
+  border: 4px solid #E52320; /* Borde rojo */
+  padding: 15px 25px;
+  transform: rotate(-10deg); /* Inclinación del logo */
+  box-shadow: 5px 5px 0px #000000;
 }
 
-.section-title {
-  font-family: var(--font-disp);
-  font-size: clamp(2rem, 4vw, 3rem);
+.logo-text-top {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--blanco);
-  line-height: 1.1;
+  color: #1a1a1a;
+  line-height: 0.9;
+  letter-spacing: -2px;
 }
 
-.accent { color: var(--naranja); }
-
-/* ── BOTONES ────────────────────────────────── */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--naranja);
-  color: var(--negro);
-  font-family: var(--font-disp);
+.logo-text-bottom {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
+  color: #ffffff;
+  background-color: #E52320;
+  padding: 2px 6px;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* --- TÍTULO TALLER MECÁNICO --- */
+.title-block h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
   text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: var(--radius);
-  border: 2px solid var(--naranja);
-  cursor: pointer;
-  transition: background var(--trans), transform var(--trans);
+  line-height: 0.9;
+  text-align: right;
+  letter-spacing: -1px;
 }
 
-.btn-primary:hover {
-  background: var(--naranja-2);
-  border-color: var(--naranja-2);
-  transform: translateY(-2px);
+/* --- SECCIÓN CONTENIDO (MANTENIMIENTO ROJO) --- */
+.services-section {
+  max-width: 1100px;
+  margin: -20px auto 60px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
 }
 
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  color: var(--humo);
-  font-family: var(--font-disp);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
+/* Letras rojas gigantes e inclinadas hacia arriba */
+.main-service-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #E52320; /* Rojo ARA */
   text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: var(--radius);
-  border: 2px solid var(--acero-2);
-  transition: border-color var(--trans), color var(--trans);
+  transform: rotate(-8deg); /* Ángulo ascendente de la lona */
+  display: inline-block;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0px #000000;
 }
 
-.btn-ghost:hover {
-  border-color: var(--humo);
-  color: var(--blanco);
-}
-
-.btn-full { width: 100%; justify-content: center; }
-
-/* ── NAVBAR ─────────────────────────────────── */
-.navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
+/* --- LISTA DE SERVICIOS EN NEGRO --- */
+.services-list {
+  list-style: none;
   display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 0 clamp(16px, 4vw, 48px);
-  height: 68px;
-  background: rgba(13,13,13,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: box-shadow var(--trans);
-}
-
-.navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-disp);
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--humo);
-  flex-shrink: 0;
-}
-
-.nav-logo strong { color: var(--naranja); }
-.logo-icon { width: 32px; height: 32px; }
-
-.nav-links {
-  display: flex;
-  gap: 28px;
-  margin-left: auto;
-}
-
-.nav-links a {
-  font-family: var(--font-disp);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--acero);
-  transition: color var(--trans);
-}
-
-.nav-links a:hover { color: var(--blanco); }
-
-.btn-call {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--naranja);
-  color: var(--negro);
-  font-family: var(--font-disp);
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  flex-shrink: 0;
-  transition: background var(--trans);
-}
-
-.btn-call:hover { background: var(--naranja-2); }
-
-.nav-toggle {
-  display: none;
   flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  margin-left: auto;
+  align-items: flex-end; /* Alineados a la derecha como el original */
+  gap: 15px;
 }
 
-.nav-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--humo);
-  border-radius: 2px;
-  transition: transform var(--trans), opacity var(--trans);
+.services-list li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 25px;
+}
+
+/* Viñeta o punto negro circular de la lona */
+.services-list li::after {
+  content: "•";
+  color: #1a1a1a;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  font-size: 3rem;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+@media (max-width: 768px) {
+  .hero-section { min-height: 350px; }
+  .title-block h1 { font-size: 3rem; text-align: left; }
+  .main-service-title { font-size: 3.2rem; transform: rotate(-5deg); }
+  .services-list { align-items: flex-start; }
+  .services-list li { font-size: 1.8rem; padding-left: 25px; padding-right: 0; }
+  .services-list li::after { left: 0; right: auto; }
 }
 
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -775,3 +734,5 @@ ul { list-style: none; }
 
   .contacto-form { padding: 24px 20px; }
 }
+
+
