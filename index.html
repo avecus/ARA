@@ -2,14 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+    <!--  Configura el idioma técnico de la página. Permite que tu web muestre correctamente las tildes (á, é, í), las eñes (ñ) y caracteres especiales en español sin que aparezcan símbolos raros o rotos. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace que tu página sea Responsive (adaptable). Le dice al navegador que ajuste el tamaño del diseño de forma automática según la pantalla de un celular, una tablet o una computadora. -->
   <title>Taller ARA</title>
-  <meta name="description" content="Taller mecánico especializado en diagnóstico, mantenimiento y reparación de vehículos. Más de 20 años de experiencia en Metepec." />
+    <!-- Es el texto que aparece en la pestaña de arriba de tu navegador y es el título principal de color azul que la gente verá cuando busque tu taller en Google.-->
+  <meta name="description" content="Taller mecánico especializado en diagnóstico, mantenimiento y reparación de vehículos. Más de 30 años de experiencia en Metepec." />
+    <!-- Este texto no se lee en la página, pero es el resumen en letras grises que aparece debajo del título cuando tu sitio sale en los resultados de una búsqueda de Google. Ayuda mucho a conseguir clientes locales en Metepec.-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Prepara la conexión con las tipografías de Google.Para qué sirve: Abre una vía rápida de comunicación con los servidores de Google Fonts para descargar las fuentes elegantes llamadas Oswald e Inter antes de que la página se pinte, logrando que cargue más rápido.-->
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Asegura una conexión segura y rápida con el servidor de tipografías de Google. -->
+
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Descarga los estilos de letras Oswald e Inter para que el texto se vea moderno. -->
+
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Conecta tu archivo de estilos CSS para aplicar los colores y el diseño al taller. -->
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- Define la pequeña imagen o logotipo que decora la pestaña del navegador. -->
+
+<style>
+    /* Pega aquí adentro todo el código de diseño CSS que te di en la respuesta anterior */
+    body { background-color: #ffffff; }
+    .hero-diagonal-bg { background-color: #F3F139; border-bottom: 25px solid #000000; }
+    .main-service-title { color: #E52320; }
+  </style>
 </head>
 <body>
 
@@ -20,7 +39,7 @@
         <img src="IMG_6904.jpg" alt="Instalaciones de Taller Alto Rendimiento Automotriz" class="hero-img" style="max-width: 100%; height: auto; border-radius: 8px;">
         
         <div class="hero-stats">
-          <div class="stat"><span class="stat-num">20+</span><span class="stat-label">años de experiencia</span></div>
+          <div class="stat"><span class="stat-num">30+</span><span class="stat-label">años de experiencia</span></div>
           <div class="stat"><span class="stat-num">4,800+</span><span class="stat-label">vehículos reparados</span></div>
           <div class="stat"><span class="stat-num">98%</span><span class="stat-label">clientes satisfechos</span></div>
         </div>
@@ -94,6 +113,160 @@
         </div>
       </div>
     </section>
+
+    /* --- CONFIGURACIÓN GENERAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* --- BLOQUE HERO DIAGONAL (AMARILLO Y NEGRO) --- */
+.hero-section {
+  position: relative;
+  min-height: 450px;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Fondo amarillo cortado en diagonal idéntico a la lona */
+.hero-diagonal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-color: #F3F139; /* Amarillo brillante ARA */
+  border-bottom: 25px solid #000000; /* Franja negra gruesa */
+  transform: skewY(-12deg);
+  transform-origin: top left;
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* --- RECREACIÓN DEL LOGOTIPO ARA --- */
+.logo-box {
+  background-color: #ffffff;
+  border: 4px solid #E52320; /* Borde rojo */
+  padding: 15px 25px;
+  transform: rotate(-10deg); /* Inclinación del logo */
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.logo-text-top {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.logo-text-bottom {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #E52320;
+  padding: 2px 6px;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* --- TÍTULO TALLER MECÁNICO --- */
+.title-block h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  line-height: 0.9;
+  text-align: right;
+  letter-spacing: -1px;
+}
+
+/* --- SECCIÓN CONTENIDO (MANTENIMIENTO ROJO) --- */
+.services-section {
+  max-width: 1100px;
+  margin: -20px auto 60px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Letras rojas gigantes e inclinadas hacia arriba */
+.main-service-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #E52320; /* Rojo ARA */
+  text-transform: uppercase;
+  transform: rotate(-8deg); /* Ángulo ascendente de la lona */
+  display: inline-block;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+/* --- LISTA DE SERVICIOS EN NEGRO --- */
+.services-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alineados a la derecha como el original */
+  gap: 15px;
+}
+
+.services-list li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 25px;
+}
+
+/* Viñeta o punto negro circular de la lona */
+.services-list li::after {
+  content: "•";
+  color: #1a1a1a;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  font-size: 3rem;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+@media (max-width: 768px) {
+  .hero-section { min-height: 350px; }
+  .title-block h1 { font-size: 3rem; text-align: left; }
+  .main-service-title { font-size: 3.2rem; transform: rotate(-5deg); }
+  .services-list { align-items: flex-start; }
+  .services-list li { font-size: 1.8rem; padding-left: 25px; padding-right: 0; }
+  .services-list li::after { left: 0; right: auto; }
+}
+
 
     <!-- ── SERVICIOS ──────────────────────────────────────────────── -->
     <section class="section servicios" id="servicios">
@@ -429,4 +602,38 @@
 
   <script src="js/main.js"></script>
 </body>
+  <body>
+  <!-- Encabezado con la estética diagonal e inclinada del diseño original -->
+  <header class="hero-section">
+    <div class="hero-diagonal-bg"></div>
+    
+    <div class="hero-container">
+      <!-- Bloque del Logotipo Oficial ARA -->
+      <div class="logo-box">
+        <div class="logo-text-top">ARA</div>
+        <div class="logo-text-bottom">ALTO RENDIMIENTO AUTOMOTRIZ</div>
+      </div>
+      
+      <!-- Títulos Principales en Negro -->
+      <div class="title-block">
+        <h1>TALLER<br>MECÁNICO</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección de Servicios Destacados -->
+  <main class="services-section">
+    <!-- Palabra MANTENIMIENTO inclinada en rojo gigante -->
+    <h2 class="main-service-title">MANTENIMIENTO</h2>
+    
+    <!-- Lista de servicios con el punto lateral de la lona -->
+    <ul class="services-list">
+      <li>Afinaciones</li>
+      <li>Frenos</li>
+      <li>Cambio de aceite</li>
+      <li>Sistema de enfriamiento</li>
+    </ul>
+  </main>
+</body>
+
 </html>
