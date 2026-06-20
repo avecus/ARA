@@ -1,0 +1,63 @@
+/* Contenedor principal de la galería */
+.seccion-colmena {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.titulo-galeria {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  border-left: 6px solid #E52320; /* Rojo ARA */
+  padding-left: 15px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Rejilla matemática para crear el efecto de panal */
+.contenedor-panal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas automáticas */
+  gap: 15px; /* Espacio entre hexágonos */
+  padding-bottom: 50px;
+}
+
+/* La celda que recorta la imagen en forma hexagonal */
+.celda-hexagonal {
+  position: relative;
+  width: 100%;
+  padding-top: 115%; /* Mantiene la proporción geométrica del hexágono */
+  overflow: hidden;
+  /* El truco de magia: recorta los 6 puntos exactos del hexágono */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.3s ease;
+  background-color: #F3F139; /* Fondo amarillo ARA por si tarda en cargar la foto */
+}
+
+/* Efecto visual al pasar el mouse por encima */
+.celda-hexagonal:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+/* Ajuste de la imagen interna para que no se deforme */
+.celda-hexagonal img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la foto al centro del hexágono sin estirarla */
+}
+
+/* Truco CSS avanzado: desplaza las celdas pares para encajar en los huecos */
+@media (min-width: 768px) {
+  .contenedor-panal {
+    gap: 25px 10px; /* Ajusta el espacio vertical y horizontal */
+  }
+  /* Empuja sutilmente las columnas impares hacia abajo para entrelazarse */
+  .celda-hexagonal:nth-child(even) {
+    margin-top: 40px;
+  }
+}
