@@ -167,7 +167,7 @@ body {
 /* --- RESPONSIVO PARA CELULARES --- */
 @media (max-width: 768px) {
   .hero-section { min-height: 350px; }
-  .title-block h1 { font-size: 3rem; text-align: left; }
+  .title-block h1 { font-size: 3rem; text-align: center; }
   .main-service-title { font-size: 3.2rem; transform: rotate(-5deg); }
   .services-list { align-items: flex-start; }
   .services-list li { font-size: 1.8rem; padding-left: 25px; padding-right: 0; }
