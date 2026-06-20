@@ -861,3 +861,115 @@ body {
 p {
   text-align: center;
 }
+
+/* --- BARRA DE NAVEGACIÓN COMPATIBLE --- */
+.header-principal {
+  background-color: #1a1a1a; /* Fondo oscuro elegante */
+  border-bottom: 5px solid #F3F139; /* Línea amarilla ARA */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Soporte responsivo básico */
+}
+
+/* --- LOGOTIPO ESTILO LONA --- */
+.nav-logo {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-logo strong {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  background-color: #F3F139; /* Resalta ARA en amarillo */
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-left: 4px;
+  display: inline-block;
+  transform: skewX(-10deg); /* Inclinación mecánica */
+}
+
+/* --- ENLACES DEL MENÚ --- */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cccccc;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+  padding: 5px 0;
+  position: relative;
+}
+
+/* Efecto visual al pasar el cursor por los enlaces */
+.nav-links a:hover {
+  color: #F3F139; /* Cambia a amarillo */
+}
+
+/* --- BOTÓN DE LLAMADA DE ACCIÓN --- */
+.btn-call {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #E52320; /* Rojo de urgencia/llamada */
+  padding: 8px 18px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-call:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #F3F139; /* Sombra cambia a amarilla al presionar */
+}
+
+.icon-tel {
+  width: 18px;
+  height: 18px;
+}
+
+/* --- ADAPTACIÓN AUTOMÁTICA PARA CELULARES --- */
+@media (max-width: 768px) {
+  .header-contenedor {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .btn-call {
+    width: 100%;
+    justify-content: center;
+  }
+}
