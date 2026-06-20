@@ -859,5 +859,9 @@ body {
 }
 
 p {
+    width: 100%;       /* Obliga a la caja a medir todo el ancho de la pantalla */
+  max-width: 100%;   /* Rompe cualquier límite de tamaño previo */
+  margin: 0 auto;    /* Centra la caja contenedora por fuera */
+  display: block;   
   text-align: center;
 }
