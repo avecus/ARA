@@ -370,7 +370,7 @@ body {
 }
 
 .nosotros-text p {
-  color: var(--acero);
+  color: #F5EB27 (--amarilli);
   margin-bottom: 16px;
   max-width: 520px;
 }
