@@ -397,7 +397,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
-  color: var(--humo);
+  color: #FFFFFF(--bco);
 }
 
 .nosotros-valores li svg { color: var(--naranja); flex-shrink: 0; margin-top: 2px; }
@@ -416,7 +416,7 @@ body {
   bottom: -20px;
   right: -12px;
   background: var(--naranja);
-  color: var(--negro);
+  color: #FFFFFF(--bco);
   border-radius: var(--radius-l);
   padding: 20px 24px;
   text-align: center;
