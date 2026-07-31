@@ -431,9 +431,14 @@
               <label for="mensaje">¿En qué te podemos ayudar?</label>
               <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe el problema o el servicio que necesitas…" required></textarea>
 				<textarea id="cuadro-mensaje" placeholder="Hola, tengo un " rows="4
+					
+					
 </button>
 
-<!-- Aquí se escribirá el mensaje automáticamente -->
+		
+const botones = document.querySelectorAll('.btn-mensaje');
+					const cuadroTexto = document.getElementById('cuadro-mensaje');
+					
 <textarea id="cuadro-mensaje" placeholder="El mensaje aparecerá aquí..." rows="4" cols="40"></textarea>
             </div>
             <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
@@ -448,8 +453,24 @@
       </div>
     </section>
 
-  </main>
+<script // 1. Buscamos todos los botones que tengan la clase 'btn-mensaje'
+const botones = document.querySelectorAll('.btn-mensaje');
+// 2. Buscamos el cuadro de texto donde queremos escribir
+const cuadroTexto = document.getElementById('cuadro-mensaje');
 
+// 3. Le añadimos la función de clic a cada botón
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    // Leemos el mensaje específico de ese botón
+    const mensajeEspecifico = boton.getAttribute('data-mensaje');
+    
+    // Lo escribimos dentro del cuadro de texto
+    cuadroTexto.value = mensajeEspecifico;
+  });
+});
+/script>
+	  
+  </main>
 
   <!-- Botón WhatsApp flotante -->
   <a href="https://wa.me/525521236709" class="wa-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
