@@ -300,7 +300,7 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF(--bco);
+  color: mix-blend-mode: difference;
   margin-top: 4px;
 }
 
@@ -335,7 +335,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--naranja);
+  color: #ffffff(--naranja);
 }
 
 .service-icon svg { width: 28px; height: 28px; }
