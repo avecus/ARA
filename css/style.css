@@ -43,7 +43,7 @@ body {
   background-color: #ffffff;
    /* Esto controla el contenedor del fondo */
    /* ¡Obligatorio que sea blanco para que funcione! */
-  color: #ffffff; /* Cambia esto a black para probar el efecto */
+  color: #000000; /* Cambia esto a black para probar el efecto */
     mix-blend-mode: difference;
    padding: 50px;
   text-align: center;
