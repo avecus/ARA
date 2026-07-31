@@ -42,6 +42,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   color: #FFFFFF;
+mix-blend-mode: difference;
   overflow-x: hidden;
 }
 
