@@ -310,7 +310,8 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: mix-blend-mode: difference;
+   color: white 
+   mix-blend-mode: difference;
   margin-top: 4px;
 }
 
