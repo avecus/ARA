@@ -40,8 +40,8 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: mix-blend-mode: difference;
+  background-color: #ffffff; class="texto-dinamico"
+  color: #ffffff
   overflow-x: hidden;
 }
 
