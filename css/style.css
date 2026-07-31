@@ -389,7 +389,7 @@ body {
 }
 
 .nosotros-text p {
-  color: #FFFFFF;
+  color: var(--negro);
   margin-bottom: 16px;
   max-width: 520px;
 }
@@ -406,7 +406,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
-  color: #FFFFFF;
+  color: var(--negro);
 }
 
 .nosotros-valores li svg { color: var(--naranja); flex-shrink: 0; margin-top: 2px; }
@@ -425,7 +425,7 @@ body {
   bottom: -20px;
   right: -12px;
   background: var(--naranja);
-  color: #FFFFFF(--bco);
+  color: var(--bco);
   border-radius: var(--radius-l);
   padding: 20px 24px;
   text-align: center;
