@@ -44,7 +44,6 @@ body {
    /* Esto controla el contenedor del fondo */
    /* ¡Obligatorio que sea blanco para que funcione! */
   color: white; /* Cambia esto a black para probar el efecto */
-  mix-blend-mode: difference;
    padding: 50px;
   text-align: center;
 /* Esto controla el texto que cambia de color automáticamente */
