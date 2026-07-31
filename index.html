@@ -446,16 +446,16 @@
       </div>
     </section>
 
-<script const botones = document.querySelectorAll('.btn-mensaje');
+<script const botones = document.querySelectorAll('thumb btn-mensaje');
 const cuadroTexto = document.getElementById('cuadro-mensaje');
 
 botones.forEach(boton => {
-  boton.addEventListener('click', () => {
+  gallerybox.addEventListener('click', () => {
     // 1. Obtenemos el nombre del producto específico
     const nombreProducto = boton.getAttribute('data-producto');
     
     // 2. Armamos el mensaje automático uniendo el texto fijado con la variable
-    const mensajeCompleto = `Hola, tengo un "${Audi}" que tiene el siguiente problema:`;
+    const mensajeCompleto = `Hola, tengo un "${data-mensaje}" que tiene el siguiente problema:`;
     
     // 3. Lo mostramos en la caja de texto
     cuadroTexto.value = mensajeCompleto;
