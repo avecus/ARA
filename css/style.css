@@ -389,7 +389,7 @@ body {
 }
 
 .nosotros-text p {
-  color: blanco;
+  color: #FFFFFF;
   margin-bottom: 16px;
   max-width: 520px;
 }
@@ -406,7 +406,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
-  color: #FFFFFF(--bco);
+  color: #FFFFFF;
 }
 
 .nosotros-valores li svg { color: var(--naranja); flex-shrink: 0; margin-top: 2px; }
