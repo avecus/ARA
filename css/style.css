@@ -43,7 +43,7 @@ body {
   background-color: #ffffff;
    /* Esto controla el contenedor del fondo */
    /* ¡Obligatorio que sea blanco para que funcione! */
-  color: white; /* Cambia esto a black para probar el efecto */
+  color: #000000; /* Cambia esto a black para probar el efecto */
    padding: 50px;
   text-align: center;
 /* Esto controla el texto que cambia de color automáticamente */
@@ -299,7 +299,7 @@ body {
   font-family: var(--font-disp);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: var(--#ff5733);
+  color: var(--black);
   line-height: 1;
 }
 
