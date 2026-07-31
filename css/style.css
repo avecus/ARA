@@ -40,7 +40,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff; class="texto-dinamico"
+  background-color: #ffffff;
    /* Esto controla el contenedor del fondo */
    /* ¡Obligatorio que sea blanco para que funcione! */
   color: white; /* Cambia esto a black para probar el efecto */
@@ -301,7 +301,6 @@ body {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
   color: var(--#ff5733);
-     mix-blend-mode: difference;
   line-height: 1;
 }
 
@@ -311,7 +310,6 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
    color: black
-   mix-blend-mode: difference;
   margin-top: 4px;
 }
 
