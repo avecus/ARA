@@ -41,11 +41,11 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff; class="texto-dinamico"
-  color: #ffffff/* Esto controla el contenedor del fondo */
+   /* Esto controla el contenedor del fondo */
    /* ¡Obligatorio que sea blanco para que funcione! */
-  mix-blend-mode: difference;
   color: white; /* Cambia esto a black para probar el efecto */
-  padding: 50px;
+  mix-blend-mode: difference;
+   padding: 50px;
   text-align: center;
 /* Esto controla el texto que cambia de color automáticamente */
   font-size: 24px;
