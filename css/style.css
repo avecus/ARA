@@ -900,6 +900,24 @@ p {
 .gallery-item img {
   width: 100%;       /* Obliga a la foto a estirarse a lo ancho del contenedor */
   height: 100%;      /* Obliga a la foto a estirarse a lo alto del contenedor */
+
+   /* Esto quita los estilos por defecto del botón y lo hace actuar como el div original */
+button.thumb {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ocupa todo el ancho de los 155px del gallerybox */
+  cursor: pointer; /* Hace que aparezca la manita al pasar el mouse */
+  display: block;  /* Se comporta exactamente igual que un div */
+}
+
+/* Opcional: Un pequeño efecto visual cuando pasen el cursor por encima */
+button.thumb:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
   
   /* EL TRUCO DE MAGIA: Centra y recorta los bordes sobrantes automáticamente */
   object-fit: cover; 
