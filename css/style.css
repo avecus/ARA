@@ -160,7 +160,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Alineados a la derecha como el original */
-  gap: 15px;
+  transform: translateX(-5cm);
+   gap: 15px;
 }
 
 .services-list li {
