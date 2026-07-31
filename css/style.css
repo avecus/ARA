@@ -68,7 +68,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 95%;
+  height: 100%;
   background-color: #F3F139; /* Amarillo brillante ARA */
   border-bottom: 25px solid #000000; /* Franja negra gruesa */
   transform: skewY(-12deg);
@@ -92,7 +92,7 @@ body {
 /* --- RECREACIÓN DEL LOGOTIPO ARA --- */
 .logo-box {
   background-color: #ffffff;
-  border: 4px solid #F3F139; /* Borde rojo */
+  border: 4px solid #E52320; /* Borde rojo */
   padding: 15px 25px;
   transform: rotate(-10deg); /* Inclinación del logo */
   box-shadow: 5px 5px 0px #000000;
