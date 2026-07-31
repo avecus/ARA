@@ -709,7 +709,7 @@ botones.forEach(function(boton) {
     const nombreProducto = boton.getAttribute('data-producto');
     
     // Armamos el texto usando comillas normales y signos +
-    const mensajeCompleto = "¡Hola! Tengo un "${nombreProducto}" \"" + nombreProducto + "\". ¿Está disponible?";
+    const mensajeCompleto = "¡Hola! Tengo un "${nombreProducto}" + nombreProducto + "\". ¿Está disponible?";
     
     // 1. Escribe el texto en la caja
     cuadroTexto.value = mensajeCompleto;
