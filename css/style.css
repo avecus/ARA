@@ -345,7 +345,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: #ffffff(--naranja);
+  color: var(--white);
 }
 
 .service-icon svg { width: 28px; height: 28px; }
@@ -356,7 +356,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #FFFFFF(--blanco);
+  color: var(--blanco);
   margin-bottom: 10px;
 }
 
