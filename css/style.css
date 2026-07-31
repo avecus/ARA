@@ -300,7 +300,8 @@ body {
   font-family: var(--font-disp);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: var(--naranja);
+  color: var(--#ff5733);
+     mix-blend-mode: difference;
   line-height: 1;
 }
 
