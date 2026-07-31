@@ -345,7 +345,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--white);
+  color: var(--blanco);
 }
 
 .service-icon svg { width: 28px; height: 28px; }
