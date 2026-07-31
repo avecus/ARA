@@ -146,7 +146,7 @@ body {
   font-weight: 700;
   color: #E52320; /* Rojo ARA */
   text-transform: uppercase;
-  transform: rotate(-8deg); /* Ángulo ascendente de la lona */
+  transform: rotate(-12deg); /* Ángulo ascendente de la lona */
    transform: translateX(-5cm)
   display: inline-block;
   margin-bottom: 40px;
