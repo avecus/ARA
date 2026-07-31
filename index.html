@@ -437,7 +437,18 @@
             <p class="form-note">También puedes escribirnos directo por <a href="https://wa.me/525521236709" target="_blank" rel="noopener">WhatsApp</a>.</p>
           </form>
           <div class="form-success" id="form-success" hidden>
-          
+
+<!-- Agrega id="mi-formulario" a tu etiqueta form -->
+<form id="mi-formulario">
+  <div class="form-group">
+    <label for="mensaje">¿En qué te podemos ayudar?</label>
+    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe el problema o el servicio que necesitas…" required></textarea>
+  </div>
+  <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
+  <p class="form-note">También puedes escribirnos directo por <a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a>.</p>
+</form>
+
+			  
             <h3>¡Envía tu mensaje!</h3>
             <p>Te contactamos en menos de 24 horas. Si es urgente, llámanos al <a href="tel:+527222710502">722 2710502</a>.</p>
           </div>
@@ -721,6 +732,43 @@ botones.forEach(function(boton) {
       window.open("https://wa.me" + tuTelefono + "?text=" + mensajeCodificado, "_blank");
     };
   });
+});
+</script>
+
+	  <script>
+const botones = document.querySelectorAll('.btn-mensaje');
+const cuadroTexto = document.getElementById('mensaje');
+// Seleccionamos el formulario completo
+const formulario = document.getElementById('mi-formulario');
+
+// Tu número de WhatsApp real (sin el signo +)
+const tuTelefono = "525521236709"; 
+
+// --- 1. LÓGICA DE LOS BOTONES DE LA GALERÍA ---
+botones.forEach(function(boton) {
+  boton.addEventListener('click', function() {
+    const nombreProducto = boton.getAttribute('data-producto');
+    const mensajeCompleto = "¡Hola! Tengo un " + nombreProducto + ". ¿Está disponible?";
+    
+    cuadroTexto.value = mensajeCompleto;
+    cuadroTexto.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    cuadroTexto.focus();
+  });
+});
+
+// --- 2. LÓGICA DEL BOTÓN "ENVIAR MENSAJE" ---
+formulario.addEventListener('submit', function(evento) {
+  // Evitamos que la página se recargue o intente enviarse a un servidor inexistente
+  evento.preventDefault();
+  
+  // Obtenemos el texto exacto que está escrito en la caja en ese momento
+  const textoEscrito = cuadroTexto.value;
+  
+  // Convertimos el texto para que sea compatible con un enlace web
+  const mensajeCodificado = encodeURIComponent(textoEscrito);
+  
+  // Abrimos WhatsApp en una pestaña nueva con el mensaje listo
+  window.open("https://wa.me" + tuTelefono + "?text=" + mensajeCodificado, "_blank");
 });
 </script>
 
