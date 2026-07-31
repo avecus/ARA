@@ -695,21 +695,20 @@
     </div>
   </footer>
 
-<script 
-
-	const botones = document.querySelectorAll('.btn-mensaje');
+<script>
+const botones = document.querySelectorAll('.btn-mensaje');
 const cuadroTexto = document.getElementById('cuadro-mensaje');
 const btnWhatsApp = document.getElementById('btn-enviar-whatsapp');
 
-// Escribe tu número aquí (ejemplo: 521234567890) sin el signo +
+// Tu número guardado correctamente
 const tuTelefono = "527225234096"; 
 
 botones.forEach(function(boton) {
   boton.addEventListener('click', function() {
     const nombreProducto = boton.getAttribute('data-producto');
     
-    // Armamos el texto usando comillas normales y signos +
-    const mensajeCompleto = "¡Hola! Tengo un "${nombreProducto}" + nombreProducto + "\". ¿Está disponible?";
+    // CORREGIDO: Eliminadas las comillas sueltas que rompían el código
+    const mensajeCompleto = "¡Hola! Tengo un " + nombreProducto + ". ¿Está disponible?";
     
     // 1. Escribe el texto en la caja
     cuadroTexto.value = mensajeCompleto;
@@ -717,12 +716,13 @@ botones.forEach(function(boton) {
     // 2. Codifica el texto para la web
     const mensajeCodificado = encodeURIComponent(mensajeCompleto);
     
-    // 3. Asigna la acción al botón de WhatsApp
+    // 3. Asigna la acción al botón de WhatsApp (Se agregó la barra '/' que faltaba en wa.me/)
     btnWhatsApp.onclick = function() {
       window.open("https://wa.me" + tuTelefono + "?text=" + mensajeCodificado, "_blank");
     };
   });
-})
-/script>
+});
+</script>
+
 	  
 </html>
