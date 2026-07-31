@@ -446,23 +446,6 @@
       </div>
     </section>
 
-<script const botones = document.querySelectorAll('thumb btn-mensaje');
-const cuadroTexto = document.getElementById('cuadro-mensaje');
-
-botones.forEach(boton => {
-  gallerybox.addEventListener('click', () => {
-    // 1. Obtenemos el nombre del producto específico
-    const nombreProducto = boton.getAttribute('data-producto');
-    
-    // 2. Armamos el mensaje automático uniendo el texto fijado con la variable
-    const mensajeCompleto = `Hola, tengo un "${data-mensaje}" que tiene el siguiente problema:`;
-    
-    // 3. Lo mostramos en la caja de texto
-    cuadroTexto.value = mensajeCompleto;
-  });
-});
-
-/script>
 	  
   </main>
 
@@ -530,13 +513,12 @@ botones.forEach(boton => {
 			<button class="thumb btn-mensaje" data-producto="Cámara Réflex Vintage" style="width: 150px; height: 150px;" data-mensaje="Audi"> <span typeof="mw:File"><a class="mw-file-description"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/120px-Audi_logo.svg.png" decoding="async" loading="lazy" width="120" height="68" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/250px-Audi_logo.svg.png 2x" data-file-width="1021" data-file-height="576"></a></span></button>
 
 
-			
-<li class="gallerybox" style="width: 155px">
+				<li class="gallerybox" style="width: 155px">
   <!-- 1. Creamos el botón dinámico con el nombre del producto -->
-  <button class="thumb btn-mensaje" data-producto="Audi">
+  <button class="thumb btn-mensaje" data-mensaje="¡Hola! Me interesa comprar el producto A." data-producto="Audi">
     
     <!-- 2. Aquí dentro pegas exactamente tu span con el logo de Audi -->
-  <span typeof="mw:File"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/120px-Audi_logo.svg.png" decoding="async" loading="lazy" width="120" height="68" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/250px-Audi_logo.svg.png 2x" data-file-width="1021" data-file-height="576"></span>
+  <span typeof="mw:File"><img alt="Logo de Audi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/120px-Audi_logo.svg.png" decoding="async" loading="lazy" width="120" height="68" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Audi_logo.svg/250px-Audi_logo.svg.png 2x" data-file-width="1021" data-file-height="576"></span>
 
   </button>
 </li>
@@ -713,5 +695,35 @@ botones.forEach(boton => {
       <p class="footer-copy">🄯 2026 Alto Rendimiento Automotriz · Metepec, Méx.</p>
     </div>
   </footer>
+
+<script 
+
+	const botones = document.querySelectorAll('.btn-mensaje');
+const cuadroTexto = document.getElementById('cuadro-mensaje');
+const btnWhatsApp = document.getElementById('btn-enviar-whatsapp');
+
+// Escribe tu número aquí (ejemplo: 521234567890) sin el signo +
+const tuTelefono = "527225234096"; 
+
+botones.forEach(function(boton) {
+  boton.addEventListener('click', function() {
+    const nombreProducto = boton.getAttribute('data-producto');
+    
+    // Armamos el texto usando comillas normales y signos +
+    const mensajeCompleto = "¡Hola! Tengo un "${nombreProducto}" \"" + nombreProducto + "\". ¿Está disponible?";
+    
+    // 1. Escribe el texto en la caja
+    cuadroTexto.value = mensajeCompleto;
+    
+    // 2. Codifica el texto para la web
+    const mensajeCodificado = encodeURIComponent(mensajeCompleto);
+    
+    // 3. Asigna la acción al botón de WhatsApp
+    btnWhatsApp.onclick = function() {
+      window.open("https://wa.me" + tuTelefono + "?text=" + mensajeCodificado, "_blank");
+    };
+  });
+})
+/script>
 	  
 </html>
