@@ -379,7 +379,7 @@ body {
 }
 
 /* ── NOSOTROS ───────────────────────────────── */
-.nosotros { background: var(--negro); }
+.nosotros { background: var(--white); }
 
 .nosotros-grid {
   display: grid;
