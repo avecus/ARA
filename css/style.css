@@ -924,3 +924,9 @@ button.thumb:hover {
   
   display: block;    /* Elimina un espacio en blanco rebelde que se crea abajo */
 }
+
+img { max-width: 100%; height: auto; }.
+
+.container { width: 100%; max-width: 1200px; margin: auto; }.
+
+body { font-size: 16px; }
