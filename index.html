@@ -587,6 +587,49 @@
           </form>
           <div class="form-success" id="form-success" hidden>
 
+			  <!-- Formulario HTML -->
+<form id="formulario-whatsapp">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" required>
+  <br><br>
+  
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" required></textarea>
+  <br><br>
+  
+  <button type="submit">Enviar a WhatsApp</button>
+</form>
+
+
+
+			  
+<script>
+document.getElementById('formulario-whatsapp').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que la página se recargue
+
+    // 1. Configura tu número de teléfono (con código de país, sin el signo +)
+    // Ejemplo: 52 para México, 34 para España, 54 para Argentina, etc.
+    const telefono = "525521236709"; 
+
+    // 2. Obtener los valores que escribió el usuario
+    const nombre = document.getElementById('nombre').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // 3. Crear el texto del mensaje formateado
+    const textoMensaje = `Hola, mi nombre es ${nombre}. Tengo un vehículo de la marca: ${mensaje}`;
+
+    // 4. Codificar el texto para que sea compatible con una URL de navegador
+    const mensajeCodificado = encodeURIComponent(textoMensaje);
+
+    // 5. Crear el enlace final de WhatsApp
+    const urlWhatsApp = `https://wa.me{telefono}?text=${mensajeCodificado}`;
+
+    // 6. Abrir el enlace en una pestaña nueva
+    window.open(urlWhatsApp, '_blank');
+});
+</script>
+
+
 <!-- Agrega id="mi-formulario" a tu etiqueta form -->
 <form id="mi-formulario">
   <div class="form-group">
