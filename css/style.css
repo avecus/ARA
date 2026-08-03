@@ -130,6 +130,24 @@ body {
   letter-spacing: -1px;
 }
 
+.hero-container {
+  display: flex;
+  justify-content: space-between; /* Mantiene contacto a izq y título a der */
+  align-items: flex-end;        /* Opcional: alinea ambos a la base */
+  padding-top: 100px;           /* Espacio para que no choquen con la diagonal superior */
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  color: #000; /* Asegura visibilidad sobre el fondo amarillo */
+}
+
+.hero-title {
+  flex: 1;
+  text-align: right;
+}
+
 /* --- SECCIÓN CONTENIDO (MANTENIMIENTO ROJO) --- */
 .services-section {
   max-width: 1100px;
@@ -537,7 +555,7 @@ body {
 .contacto-datos li div { display: flex; flex-direction: column; gap: 2px; }
 
 .contacto-datos li strong {
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--acero-2);
@@ -545,7 +563,7 @@ body {
 
 .contacto-datos li span,
 .contacto-datos li a {
-  font-size: 1rem;
+  font-size: 2rem;
   color: var(--humo);
 }
 
