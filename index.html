@@ -584,91 +584,11 @@ Antiguo Camino a San Mateo 714, Col. Bellavista, Metepec, Estado de México <br>
         <div class="contacto-form-wrap">
           <form class="contacto-form" id="contact-form" novalidate>
             <h3>Escríbenos</h3>
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name"/>
-            </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="722 000 0000" required autocomplete="tel"/>
-            </div>
-            <div class="form-group">
-              <label for="vehiculo">Vehículo</label>
-              <input type="text" id="vehiculo" name="vehiculo" placeholder="Marca, modelo y año" />
-            </div>
-            <div class="form-group">
-              <label for="mensaje">¿En qué te podemos ayudar?  ¡Envíanos un mensaje por WhatsApp! </label> 
-
-				    <p class="form-note"> <a href="https://wa.me/525521236709" target="_blank" rel="noopener">
-						WhatsApp</a>.</p>
-          </form>
-          <div class="form-success" id="form-success" hidden>
-
-			  
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe el problema o el servicio que necesitas…" required></textarea>
-	
-
-            </div>
-            <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
-
-			  
-        
-
-			  <!-- Formulario HTML -->
-<form id="formulario-whatsapp">
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" required>
-  <br><br>
-  
-  <label for="mensaje">Mensaje:</label>
-  <textarea id="mensaje" required></textarea>
-  <br><br>
-  
-  <button type="submit">Enviar a WhatsApp</button>
-</form>
-
-
-
-			  
-<script>
-document.getElementById('formulario-whatsapp').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que la página se recargue
-
-    // 1. Configura tu número de teléfono (con código de país, sin el signo +)
-    // Ejemplo: 52 para México, 34 para España, 54 para Argentina, etc.
-    const telefono = "525521236709"; 
-
-    // 2. Obtener los valores que escribió el usuario
-    const nombre = document.getElementById('nombre').value;
-    const mensaje = document.getElementById('mensaje').value;
-
-    // 3. Crear el texto del mensaje formateado
-    const textoMensaje = `Hola, mi nombre es ${nombre}. Tengo un vehículo de la marca: ${mensaje}`;
-
-    // 4. Codificar el texto para que sea compatible con una URL de navegador
-    const mensajeCodificado = encodeURIComponent(textoMensaje);
-
-    // 5. Crear el enlace final de WhatsApp
-    const urlWhatsApp = `https://wa.me{telefono}?text=${mensajeCodificado}`;
-
-    // 6. Abrir el enlace en una pestaña nueva
-    window.open(urlWhatsApp, '_blank');
-});
-</script>
-
-
-<!-- Agrega id="mi-formulario" a tu etiqueta form -->
-<form id="mi-formulario">
-  <div class="form-group">
-    <label for="mensaje">¿En qué te podemos ayudar?</label>
-    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe el problema o el servicio que necesitas…" required></textarea>
-  </div>
-  <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
-  <p class="form-note">También puedes escribirnos directo por <a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a>.</p>
-</form>
-
-			  
-            <h3>¡Envía tu mensaje!</h3>
+           
+ <a  href="https://wa.me/525521236709" class="wa-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+	  <h3>¡Envía tu mensaje! </h3>
+  </a>
+			
             <p>Te contactamos en menos de 24 horas. Si es urgente, llámanos al <a href="tel:+527222710502">722 2710502</a>.</p>
           </div>
         </div>
